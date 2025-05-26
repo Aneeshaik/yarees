@@ -8,7 +8,6 @@ import {
   EnvelopeIcon,
   LockClosedIcon
 } from '@heroicons/react/24/solid'
-import loginImage from "../assets/login-image.png"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -40,15 +39,12 @@ const Login = () => {
   };
 
   return (
-    <div className="flex gap-2 items-center justify-center bg-[#790424] shadow-lg rounded-lg w-[650px] h-[500px]">
-      <div>
-        <p>YareeS</p>
-      </div>
+    <div className="flex gap-2 items-center justify-center bg-primary shadow-lg rounded-lg w-[700px] h-[500px]">
       <div>
         <p className="text-2xl font-semibold mb-4 text-center">Login / Signup</p>
         <label className="block text-left ml-2 mb-2 text-sm font-medium opacity-80">Email Address</label>
         <div className="flex items-center relative mb-3">
-          <EnvelopeIcon className="h-full bg-[#F4EBD0] rounded-3xl text-[#80013F] p-2 absolute left-0 top-1/2 transform -translate-y-1/2" />
+          <EnvelopeIcon className="h-full bg-secondary rounded-3xl text-primary p-2 absolute left-0 top-1/2 transform -translate-y-1/2" />
           <input
             type="email"
             placeholder="Email"
@@ -59,7 +55,7 @@ const Login = () => {
         </div>
         <label className="block text-left ml-2 mb-2 text-sm font-medium opacity-80">Password</label>
         <div className="flex items-center relative mb-5">
-          <LockClosedIcon className="h-full bg-[#F4EBD0] rounded-3xl text-[#80013F] p-2 absolute left-0 top-1/2 transform -translate-y-1/2" />
+          <LockClosedIcon className="h-full bg-secondary rounded-3xl text-primary p-2 absolute left-0 top-1/2 transform -translate-y-1/2" />
           <input
             type="password"
             placeholder="Password"
@@ -72,7 +68,7 @@ const Login = () => {
         <button
           onClick={handleAuth}
           disabled={loading}
-          className="w-full bg-[#F4EBD0] hover:bg-[#EADBB5] rounded-3xl text-[#80013F] font-semibold py-2 px-4"
+          className="w-full bg-secondary hover:bg-accent rounded-3xl text-primary font-semibold py-2 px-4"
         >
           {loading ? "Loading..." : "Login / Sign Up"}
         </button>
